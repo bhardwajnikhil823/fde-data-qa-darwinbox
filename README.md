@@ -79,6 +79,12 @@ files loaded, *"Compare total headcount between the two files"*).
 
 ## What I'd build next
 
+- **Multi-session workspaces**: today the app is one continuous workspace
+  (single shared table namespace + a single "Clear session" reset). The
+  natural next step is named, independently saveable sessions — auto-named
+  by default, renameable, deletable, like a ChatGPT-style chat list — each
+  with its own isolated tables and Q&A history, scoped per authenticated
+  user.
 - Enterprise RBAC / row-level security (map Darwinbox org roles to which
   tables/rows a user's questions can touch).
 - Result & query caching (hash of file content + question) to cut latency
@@ -90,3 +96,4 @@ files loaded, *"Compare total headcount between the two files"*).
   previous result).
 - An evaluation harness with a small set of known question→SQL pairs to
   regression-test model/prompt changes.
+

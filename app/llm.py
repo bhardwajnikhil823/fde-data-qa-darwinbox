@@ -96,7 +96,7 @@ def generate_sql_with_retry(
         try:
             df = executor(sql)
             return sql, df, attempt
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             if attempt == max_retries + 1:
                 raise
             error_context = str(exc)

@@ -3,7 +3,7 @@ Forward Deployed Engineer take-home: AI-Powered Data Q&A Web App.
 
 Upload multiple CSV/Excel files, ask analytical questions in plain English,
 get back correct answers (and charts, when relevant) — powered by an
-open-source LLM (Llama 3.3 via Groq) generating validated, read-only SQL
+open-source LLM (Qwen, via Groq) generating validated, read-only SQL
 against a DuckDB (optionally MotherDuck cloud) engine.
 """
 from __future__ import annotations
@@ -135,10 +135,9 @@ if st.session_state.tables:
     table_to_file = {v: k for k, v in st.session_state.file_to_table.items()}
     for name, info in st.session_state.tables.items():
         col_a, col_b = st.sidebar.columns([5, 1])
-        with col_a:
-            with st.expander(f"🗂 {name} ({info.row_count} rows) — preview (first 5 rows)"):
-                st.dataframe(info.sample_rows, use_container_width=True)
-                st.caption("This is just a preview. Questions run against the full table.")
+        with col_a, st.expander(f"🗂 {name} ({info.row_count} rows) — preview (first 5 rows)"):
+            st.dataframe(info.sample_rows, use_container_width=True)
+            st.caption("This is just a preview. Questions run against the full table.")
         with col_b:
             if st.button("✖", key=f"remove_{name}", help=f"Remove {name}"):
                 drop_table(con, name)

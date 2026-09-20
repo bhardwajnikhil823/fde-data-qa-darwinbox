@@ -32,12 +32,17 @@ always shown to the user, which matters for an HR-data product like
 Darwinbox's — analysts need to trust and audit the numbers, not just see them.
 
 ## What to build next
-Priorities in order: (1) **Enterprise RBAC** — map org/role permissions to
+Priorities in order: (1) **Multi-session workspaces** — today the app is a
+single continuous workspace per deployment (one shared table namespace, one
+"Clear session" reset); the natural next step is named, independently
+saveable sessions (auto-named, renameable, deletable — like ChatGPT's chat
+list), each with its own isolated tables and Q&A history, scoped per
+authenticated user; (2) **Enterprise RBAC** — map org/role permissions to
 which tables or rows a given user's questions can touch, essential before any
-real customer data flows through this; (2) **caching** of identical
-question+file-hash pairs to cut latency and inference cost; (3) support for
+real customer data flows through this; (3) **caching** of identical
+question+file-hash pairs to cut latency and inference cost; (4) support for
 **larger-than-memory datasets** by leaning further into MotherDuck's cloud
 storage and DuckDB's out-of-core execution instead of holding everything in
-session memory; (4) multi-turn conversational context for follow-up
-questions; (5) a small regression-test harness of known question→SQL pairs to
+session memory; (5) multi-turn conversational context for follow-up
+questions; (6) a small regression-test harness of known question→SQL pairs to
 safely iterate on the prompt/model over time.
