@@ -1,0 +1,17 @@
+month,department,headcount,attrition_count
+2025-01,Engineering,110,2
+2025-02,Engineering,112,1
+2025-03,Engineering,115,3
+2025-04,Engineering,118,2
+2025-01,Sales,60,4
+2025-02,Sales,58,3
+2025-03,Sales,61,2
+2025-04,Sales,63,1
+2025-01,HR,20,0
+2025-02,HR,21,1
+2025-03,HR,21,0
+2025-04,HR,22,0
+2025-01,Marketing,35,2
+2025-02,Marketing,36,1
+2025-03,Marketing,34,3
+2025-04,Marketing,37,1

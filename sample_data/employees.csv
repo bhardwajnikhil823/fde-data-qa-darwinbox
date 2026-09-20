@@ -1,0 +1,16 @@
+employee_id,name,department,location,tenure_years,salary
+1,Aarav Shah,Engineering,Bengaluru,3.2,1450000
+2,Priya Nair,Engineering,Bengaluru,1.5,1100000
+3,Rohan Mehta,Sales,Mumbai,5.1,950000
+4,Sara Khan,Sales,Mumbai,0.8,700000
+5,Vikram Singh,HR,Delhi,6.4,850000
+6,Anita Rao,HR,Delhi,2.1,780000
+7,Karan Malhotra,Engineering,Pune,4.4,1600000
+8,Neha Verma,Marketing,Mumbai,1.2,900000
+9,Arjun Iyer,Marketing,Bengaluru,3.9,1050000
+10,Divya Pillai,Sales,Delhi,2.7,880000
+11,Rahul Kapoor,Engineering,Pune,7.3,1900000
+12,Meera Joshi,HR,Bengaluru,0.5,650000
+13,Aditya Bose,Marketing,Delhi,4.8,1150000
+14,Ishita Kulkarni,Engineering,Mumbai,2.3,1250000
+15,Vivaan Chatterjee,Sales,Pune,3.6,920000

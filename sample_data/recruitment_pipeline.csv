@@ -1,0 +1,9 @@
+requisition_id,department,stage,days_open,opened_month
+REQ-101,Engineering,Interviewing,18,2025-02
+REQ-102,Engineering,Offer,32,2025-01
+REQ-103,Sales,Sourcing,9,2025-03
+REQ-104,Sales,Closed,45,2025-01
+REQ-105,HR,Interviewing,15,2025-03
+REQ-106,Marketing,Sourcing,7,2025-04
+REQ-107,Engineering,Sourcing,12,2025-04
+REQ-108,Marketing,Offer,25,2025-02
