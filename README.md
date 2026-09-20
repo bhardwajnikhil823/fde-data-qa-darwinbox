@@ -1,5 +1,7 @@
 # AI-Powered Data Q&A — FDE
 
+**Live app:** https://fde-data-app-darwinbox-mibbpnrv9urnms42ezpmtu.streamlit.app/
+
 Upload multiple CSV/Excel files and ask analytical questions about them in
 plain English. The app translates your question into a validated, read-only
 SQL query (run over DuckDB), executes it, and shows the answer as a table
@@ -46,6 +48,11 @@ Open http://localhost:8501, upload one or more CSV/Excel files, and ask a
 question (e.g. *"What is the average tenure by department?"* or, with two
 files loaded, *"Compare total headcount between the two files"*).
 
+Sample multi-file HR datasets (designed to exercise cross-file joins) are
+included in `sample_data/` — see `sample_data/README` context in the repo,
+or just upload all six files and try the example questions in the
+Testing section below.
+
 ## Deploying to Streamlit Community Cloud
 
 1. Push this repo to GitHub.
@@ -54,6 +61,20 @@ files loaded, *"Compare total headcount between the two files"*).
    `.streamlit/secrets.toml.example` with your real `GROQ_API_KEY`
    (and `MOTHERDUCK_TOKEN` if you want persistent cloud storage instead of
    per-session in-memory DuckDB).
+
+Note: the deployed app and your local dev environment share the same
+MotherDuck database/workspace if you use the same `MOTHERDUCK_TOKEN` in
+both — by design, given this project's single-workspace scope (see "What
+I'd build next"). Use "🗑 Clear session" to reset between test passes.
+
+## Testing
+
+Try uploading all files from `sample_data/` and asking:
+- *"What is the average tenure by department?"*
+- *"Show average performance rating by department"* (cross-file join:
+  `employees` + `performance_reviews`)
+- *"Compare headcount trend over months for Engineering"* (chart)
+- *"Delete all employee records"* (should be blocked by the guardrail)
 
 ## Guardrails (open-source model execution safety)
 
