@@ -1,4 +1,4 @@
-# AI-Powered Data Q&A — FDE Take-Home
+# AI-Powered Data Q&A — FDE
 
 Upload multiple CSV/Excel files and ask analytical questions about them in
 plain English. The app translates your question into a validated, read-only
